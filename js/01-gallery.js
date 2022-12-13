@@ -21,21 +21,27 @@ function galleryRender(galleryForCreate) {
       })
       .join('');
 }
-galleryPlace.addEventListener('click', event => {
-   event.preventDefault();
-   if (!event.target.classList.contains('gallery__image')) {
-      return;
-   }
-   const instance = basicLightbox.create(`
-            <img src="${event.target.dataset.source}" width="800" height="600">
-        `);
-   instance.show();
-   document.addEventListener('keydown', closeWindowByEscape);
-   function closeWindowByEscape(event) {
-      if (event.code !== 'Escape') {
-         return;
-      }
-      instance.close();
-      document.removeEventListener('keydown', closeWindowByEscape);
-   }
-});
+
+
+
+
+
+
+// galleryPlace.addEventListener('click', event => {
+//    event.preventDefault();
+//    if (!event.target.classList.contains('gallery__image')) {
+//       return;
+//    }
+//    const instance = basicLightbox.create(`
+//             <img src="${event.target.dataset.source}" width="800" height="600">
+//         `);
+//    instance.show();
+//    document.addEventListener('keydown', closeWindowByEscape);
+//    function closeWindowByEscape(event) {
+//       if (event.code !== 'Escape') {
+//          return;
+//       }
+//       instance.close();
+//       document.removeEventListener('keydown', closeWindowByEscape);
+//    }
+// });
